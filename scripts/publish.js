@@ -7,8 +7,9 @@ import { globSync } from "glob";
 let packages = globSync("packages/*", { absolute: true });
 
 function getTaggedVersion() {
-  let output = execSync("git tag --list --points-at HEAD").toString().trim();
-  return output.replace(/^v/g, "");
+  // let output = execSync("git tag --list --points-at HEAD").toString().trim();
+  // return output.replace(/^v/g, "");
+  return "v5-prerelease";
 }
 
 /**
